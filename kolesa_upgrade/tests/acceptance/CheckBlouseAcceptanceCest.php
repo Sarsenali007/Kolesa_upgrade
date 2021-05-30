@@ -1,6 +1,6 @@
 <?php
 
-class MyfirstAcceptanceCest
+class CheckBlouseAcceptanceCest
 {
     // tests
     public function tryToTest(AcceptanceTester $I)
