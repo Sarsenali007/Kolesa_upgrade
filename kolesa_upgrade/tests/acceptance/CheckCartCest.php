@@ -3,7 +3,7 @@
 use Page\Acceptance\MainPage;
 use Page\Acceptance\SearchPage;
 
-class CheckLoginErrorCest
+class CheckCartErrorCest
 {
 
     // tests
