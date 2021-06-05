@@ -8,10 +8,11 @@ actor: AcceptanceTester
 modules:
     enabled:
         - WebDriver:
-            url: 'https://prostochizh.github.io/form/'
+            url: 'http://automationpractice.com/'
             host: localhost
             port: 9515
             browser: chrome
-            windows size: 2000*1800
+            windows size: 1920*1080
         - \Helper\Acceptance
+        - Asserts
 step_decorators: ~

@@ -25,6 +25,7 @@ class FillFormCest
         $city = $faker->city;
         $state = $faker->region;
         $postal = $faker->postcode;
+        
         $CartNumber = $faker->getCartNum;
 
         $I->amOnPage ('');
