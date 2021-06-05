@@ -1,0 +1,4 @@
+./chromedriver --url-base=wd/hub
+
+
+vendor/bin/codecept run tests/acceptance/CheckBloksAcceptanceCest.php -vvv
