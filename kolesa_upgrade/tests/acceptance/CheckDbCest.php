@@ -80,7 +80,9 @@ public function CheckDel(AcceptanceTester $I){
     $I->seeNumberOfElements(DbMainPage::$block, self::NMB);
     $I->click(DbMainPage::$BtnSnap);
     $I->wait(2);
+
     $I->dontSeeInCollection('people', array('canBeKilledBySnap' =>  $this ->userData1['canBeKilledBySnap'],'owner' => $this ->userData1['owner']));
+    
     $user = $I->grabCollectionCount('people', array('canBeKilledBySnap' =>  $this ->userData2['canBeKilledBySnap'],'owner' => $this ->userData1['owner']));
     $I->seeNumberOfElements(DbMainPage::$block, $user);
     
