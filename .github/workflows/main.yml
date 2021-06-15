@@ -4,8 +4,8 @@ jobs:
   buildAndTest:
     runs-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@v2
-      -name: Install Dependencies
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
       - run: composer install
       - name: Install faker
       - run: composer require fzaninotto/faker
