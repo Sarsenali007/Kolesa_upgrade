@@ -13,8 +13,6 @@ jobs:
         run: sudo php -- --install-dir=/usr/local/bin --filename=composer
       - name: Install faker
         run: composer require fzaninotto/faker
-      - name: Install codecept build
-        run : codecept build
       - name: Run chromedriver
         run: nohup $CHROMEWEBDRIVER/chromedriver --url-base=/wd /dev/null 2>&1 &
       - name: Run test
