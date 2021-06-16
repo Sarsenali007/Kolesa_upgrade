@@ -1,15 +1,23 @@
 name: Workflow
 on: [push]
+
 jobs:
   buildAndTest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: nanasess/setup-php@master
+        with:
+          php-version: '7.4'
       - name: Install Dependencies
-      - run: composer install
+        run: composer install
       - name: Install faker
-      - run: composer require fzaninotto/faker
+        run: composer require fzaninotto/faker
       - name: Run chromedriver
-      - run: nohup $CHROMEWEBDRIVER/chromedriver --url-base=/wd /dev/null 2>&1 &
+        run: nohup $CHROMEWEBDRIVER/chromedriver --url-base=/wd /dev/null 2>&1 &
       - name: Run test
-      - run: php vendor/bin/codecept run --steps -vvv
+        run: php vendor/bin/codecept run --steps -vvv
+      - name: Publish Test Reoprt
+        uses: mikepenz/action-junit-reoprt@v2.4.2
+        with:
+          report_paths: 'tests/_output/report.xml'
