@@ -20,8 +20,9 @@ modules:
             browser: chrome
             capabilities:
                 chromeOptions:
-                    args: ["--headless", "--disable-gpu"] 
-            windows size: 1920*1080
+                    args: ["--headless", "--disable-gpu"]
+                    prefs:
+                        download.default_directory: "..."
         - \Helper\Acceptance
         - Asserts
 step_decorators: ~
